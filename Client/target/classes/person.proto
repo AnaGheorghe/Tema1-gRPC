@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package = "proto";
+
+service PersonInfo {
+  rpc getPersonInfo (PersonRequest) returns (InfoReply) {}
+}
+
+message PersonRequest {
+  string name = 1;
+  string cnp=2;
+}
+
+message InfoReply {
+  string message = 1;
+}
